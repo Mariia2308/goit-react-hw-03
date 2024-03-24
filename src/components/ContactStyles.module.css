@@ -1,0 +1,101 @@
+/* ContactStyles.module.css */
+li{
+
+    list-style: none;
+}
+.labelwrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.searchbox{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items:flex-start;
+    margin-bottom: 10px;
+
+}
+.input {
+    width: 270px;
+
+    padding: 10px;
+ 
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+}
+
+.inputsearch {
+    width: 320px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 10px;
+
+}
+.border {
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.liststyle{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.contact {
+    width: 250px;
+    display: flex;
+
+    justify-content:space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 20px;
+    list-style: none;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.number {
+    display: flex;
+    font-weight: bold;
+    justify-content: flex-start;
+}
+
+.phoneicon{
+    background-image: url('../img/phone-svgrepo-com.svп');
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+.usericon {
+    background-image: url('../img/user-icon-svgrepo-com.svg');
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.contactwrapp{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
