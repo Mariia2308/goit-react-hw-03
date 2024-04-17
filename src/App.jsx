@@ -57,9 +57,11 @@ const filterContactName = contact.filter(
 
       <SearchBox value={filter} onChange={onChangeFilter}/>
 
-      <ContactList contacts = {filterContactName} onDeleteContact = {onDeleteContact}/>
-
-
+         {filterContactName.length > 0 ? (
+      <ContactList contacts={filterContactName} onDeleteContact={onDeleteContact} />
+    ) : (
+      <p>No contacts found.</p>
+    )}
     </>
   )
 }

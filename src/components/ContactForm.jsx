@@ -6,15 +6,15 @@ const MAXCHAR = 10;
 const MINCHAR = 1;
 
 const contactboxSchema = Yup.object({
-    name: Yup.string().required("Name confirm").email("You must enter a valid email"),
-    number: Yup.string().required("Number confirm").min(MINCHAR, `${MINCHAR} digits`).max(MAXCHAR, `${MAXCHAR} digits`),
-    favColor: Yup.string().required("Fav col").oneOf(["red", "green", "blue", "yellow"], "Fav color one of following")
+    name: Yup.string().required("Name is required").test('valid-name', 'Invalid name format', function(value) {
+        return /^[a-zA-Z]+$/.test(value);
+    }),
+    number: Yup.string().required("Number confirm").min(MINCHAR, `${MINCHAR} digits`).max(MAXCHAR, `${MAXCHAR} digits`)
 });
 
 const FORM_INITIAL_VALUES = {
     name: "",
-    number: "",
-    favColor: ""
+    number: ""
 };
 
 const ContactForm = ({ onAddUser }) => {
@@ -32,7 +32,7 @@ const ContactForm = ({ onAddUser }) => {
             <Form className={css.border}>
                 <label className={css.labelwrap}>
                     <p>Name</p>
-                    <Field type="email" name="name" className={css.input } />
+                    <Field type="text" name="name" className={css.input } />
                     <ErrorMessage component="p" name="name" />
                 </label>
                 <label className={css.labelwrap}>
